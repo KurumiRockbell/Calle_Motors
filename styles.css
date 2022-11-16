@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    background: #CE9090;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+}
+
+a {
+    color: #F31E1E;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #F31E1E;
+}
+
+span {
+    margin: auto;
+    font-size: 1em;
+}
+
+
+/* HEADER */
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 9;
+}
+
+.header_left {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #424242;
+    padding-top: 1em;
+}
+
+.header_right {
+    grid-area: 1 / 8 / 2 / 9;
+    background-color: #424242;
+    padding-top: 1em;
+}
+
+.header_mid {
+    grid-area: 1 / 2 / 2 / 8;
+    background-color: #424242;
+    height: 10vh;
+    padding-bottom: 1em;
+}
+
+h4 {
+    display: inline;
+}
+
+.header_nav {
+    padding: 3em;
+    margin-bottom: 3em;
+}
+
+.logopr {
+    width: 75px;
+    height: 75px;
+    filter: invert(100%);
+
+}
+
+#titreheader {
+    padding: 0px 20px;
+}
+
+.header_img {
+    max-width: 30px;
+    max-height: 30px;
+
+    padding: 1em 1em;
+}
+
+#logo_calle {
+    max-width: 350px;
+    max-height: 350px;
+    margin-left: 3em;
+    margin-top: 1em;
+}
+
+
+/* CAROUSSEL */
+
+.container {
+    position: relative;
+    width: 320px;
+    height: 20vh;
+    margin: -35em auto 15em auto;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+    position: absolute;
+    width: 310px;
+    height: 230px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+
+
+.carousel__face:nth-child(1) {
+    background-image: url(assets/gF45CJ6.jpg);
+    transform: rotateY(0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+    background-image: url(assets/motowp6.jpg);
+    transform: rotateY(40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+    background-image: url(assets/Suzuki-Gixxer-155-HD-wallpaper-4.webp);
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+    background-image: url(assets/motowp1.jpg);
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+    background-image: url(assets/motowp2.jpg);
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+    background-image: url(assets/motowp3.jpg);
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+    background-image: url(assets/motowp4.jpg);
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+    background-image: url(assets/wp3110645.jpg);
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(9) {
+    background-image: url(assets/moto/2015-YAM-MT07MC-EU-MNM3-STA-002.jpg);
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+.typo_cadre {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* SECTION 3 INFORMATIONS */
+
+
+.infos_div {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 70vh;
+    margin-top: 12em;
+}
+
+.image_moto {
+    grid-area: 1 / 1 / 7 / 7;
+    background-image: url(assets/wp3110645.jpg);
+}
+
+.txt_img {
+    grid-area: 1 / 1 / 4 / 4;
+    margin-left: 3em;
+    margin-top: 5em;
+}
+
+.btnone {
+    grid-area: 5 / 1 / 7 / 3;
+    margin-top: 5em;
+}
+
+.btntwo {
+    grid-area: 5 / 3 / 7 / 5;
+    margin-top: 5em;
+}
+
+.btnthree {
+    grid-area: 5 / 5 / 7 / 7;
+    margin-top: 5em;
+}
+
+#infos_texte {
+    text-align: justify;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: #F31E1E;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #F31E1E;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(255, 0, 0, 0.24), 0 17px 50px 0 rgba(255, 0, 0, 0.19);
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #424242;
+    height: 30vh;
+}
+
+.slogan {
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.img_reseaux {
+    grid-area: 2 / 2 / 3 / 6;
+}
+
+.white_row {
+    grid-area: 3 / 1 / 4 / 7;
+}
+
+.footer_menu {
+    grid-area: 4 / 2 / 5 / 6;
+    display: inline;
+}
+
+.cgv {
+    grid-area: 5 / 3 / 6 / 5;
+}
+
+
+.inline_text {
+    display: inline;
+    padding: 0px 20px;
+}
+
+.inline_img {
+    display: inline-block;
+    max-height: 20px;
+    max-width: 20px;
+    padding: 0px 10px;
+}
+
+#twitter {
+    height: 20px;
+    width: 20px;
+}
+
+#youtube {
+    height: 20px;
+    width: 20px;
+}
+
+#linkedin {
+    height: 20px;
+}
